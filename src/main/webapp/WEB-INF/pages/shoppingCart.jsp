@@ -15,8 +15,7 @@
 <body>
    <jsp:include page="_header.jsp" />
   
-   <jsp:include page="_menu.jsp" />
-  
+
    <fmt:setLocale value="en_US" scope="session"/>
  
    <div class="page-title">My Cart</div>
@@ -45,7 +44,7 @@
                        <li>Name: ${cartLineInfo.productInfo.name}</li>
                        <li>Price: <span class="price">
                       
-                         <fmt:formatNumber value="${cartLineInfo.productInfo.price}" type="currency"/>
+                         <fmt:formatNumber value="${cartLineInfo.productInfo.price}" type="currency" currencySymbol="LKR"/>
                         
                        </span></li>
                        <li>Quantity: <form:input
@@ -53,7 +52,7 @@
                        <li>Subtotal:
                          <span class="subtotal">
                         
-                            <fmt:formatNumber value="${cartLineInfo.amount}" type="currency"/>
+                            <fmt:formatNumber value="${cartLineInfo.amount}" type="currency" currencySymbol="LKR"/>
                       
                          </span>
                        </li>

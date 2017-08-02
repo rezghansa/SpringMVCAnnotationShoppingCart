@@ -13,8 +13,7 @@
 <body>
  
    <jsp:include page="_header.jsp" />
-   <jsp:include page="_menu.jsp" />
-    
+
    <fmt:setLocale value="en_US" scope="session"/>
  
    <div class="page-title">Order Info</div>
@@ -31,7 +30,7 @@
        <ul>
            <li>Total:
            <span class="total">
-           <fmt:formatNumber value="${orderInfo.amount}" type="currency"/>
+           <fmt:formatNumber value="${orderInfo.amount}" type="currency" currencySymbol="LKR"/>
            </span></li>
        </ul>
    </div>
@@ -52,10 +51,10 @@
                <td>${orderDetailInfo.productName}</td>
                <td>${orderDetailInfo.quanity}</td>
                <td>
-                <fmt:formatNumber value="${orderDetailInfo.price}" type="currency"/>
+                <fmt:formatNumber value="${orderDetailInfo.price}" type="currency" currencySymbol="LKR"/>
                </td>
                <td>
-                <fmt:formatNumber value="${orderDetailInfo.amount}" type="currency"/>
+                <fmt:formatNumber value="${orderDetailInfo.amount}" type="currency" currencySymbol="LKR"/>
                </td>  
            </tr>
        </c:forEach>

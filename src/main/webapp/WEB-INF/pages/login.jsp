@@ -14,9 +14,6 @@
  
  
    <jsp:include page="_header.jsp" />
-   <jsp:include page="_menu.jsp" />
- 
- 
  
    <div class="page-title">Login (For Employee, Manager)</div>
  

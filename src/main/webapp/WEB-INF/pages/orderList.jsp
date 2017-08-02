@@ -13,7 +13,6 @@
 <body>
  
    <jsp:include page="_header.jsp" />
-   <jsp:include page="_menu.jsp" />
  
    <fmt:setLocale value="en_US" scope="session"/>
   
@@ -41,7 +40,7 @@
                <td>${orderInfo.customerAddress}</td>
                <td>${orderInfo.customerEmail}</td>
                <td style="color:red;">
-                  <fmt:formatNumber value="${orderInfo.amount}" type="currency"/>
+                  <fmt:formatNumber value="${orderInfo.amount}" type="currency" currencySymbol="LKR"/>
                </td>
                <td><a href="${pageContext.request.contextPath}/order?orderId=${orderInfo.id}">
                   View</a></td>
